@@ -1,0 +1,134 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+/* ===== Navbar ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b5998;
+    padding: 10px 30px;
+    position: sticky;
+    top: 0;
+}
+.logo-box {
+    display: flex;
+    align-items: center;
+}
+.logo-box img {
+    width: 60px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #fff;
+}
+.logo-box span {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.menu-box { display: flex; }
+.menu-box a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.menu-box a:hover { text-decoration: underline; }
+
+/* ===== Area tengah ===== */
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login {
+    width: 100%;
+    max-width: 400px;
+    padding: 35px 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+.login h2 {
+    margin: 0 0 8px;
+    color: #1c1e21;
+}
+.login p {
+    margin: 0 0 20px;
+    color: #606770;
+    font-size: 14px;
+}
+.login input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.login input:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+}
+.login button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1877f2;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.login button:hover { background-color: #166fe5; }
+
+.lupa {
+    display: block;
+    margin-top: 15px;
+    color: #1877f2;
+    font-size: 14px;
+    text-decoration: none;
+}
+.lupa:hover { text-decoration: underline; }
+
+/* ===== Halaman utama (index.php) ===== */
+.page-content {
+    flex: 1;
+    max-width: 700px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+.page-content h1 { margin-top: 0; color: #1c1e21; }
+.page-content a { color: #1877f2; text-decoration: none; }
+.page-content a:hover { text-decoration: underline; }
+.page-content hr { margin: 20px 0; border: 0; border-top: 1px solid #dddfe2; }
+
+@media (max-width: 600px) {
+    nav { padding: 10px 15px; }
+    .menu-box a { margin-left: 12px; font-size: 14px; }
+    .page-content { margin: 15px; padding: 20px; }
+}
